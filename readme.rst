@@ -20,10 +20,10 @@ Complete code (including a trained model) to deploy and inference a machine lear
 
 4. Output will contain
 ----------------------
-INFO:     Uvicorn running on http://0.0.0.0:8000
+INFO:     Uvicorn running on http://127.0.0.1:8000
 
 Use this url in chrome to see the model frontend;
-use http://0.0.0.0:8000/docs for testing the model in the web interface.
+use http://127.0.0.1:8000/docs for testing the model in the web interface.
 
 5. Query model
 --------------
@@ -37,4 +37,4 @@ use http://0.0.0.0:8000/docs for testing the model in the web interface.
  #. Via curl request:
         .. code-block::
 
-            curl -X POST "http://0.0.0.0:8000/predict" -H "accept: application/json" -H "Content-Type: application/json" -d '{"features": [5.1, 3.5, 1.4, 0.2]}'
+            curl -X POST http://127.0.0.1:8000/predict" -H "accept: application/json" -H "Content-Type: application/json" -d '{"features": [5.1, 3.5, 1.4, 0.2]}'
